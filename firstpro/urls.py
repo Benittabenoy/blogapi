@@ -29,5 +29,6 @@ urlpatterns = [
     path('operations/mul/',cview.mulView.as_view()),
     path('operations/fact/', cview.facView.as_view()),
     path('operations/word/', cview.wordView.as_view()),
-    path('social/post/', bview.PostView.as_view())
+    path('social/post/', bview.PostView.as_view()),
+    path("social/post/<int:pid>", bview.PostDetailView.as_view())
 ]
